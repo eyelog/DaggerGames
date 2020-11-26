@@ -9,5 +9,6 @@ import dagger.Component
     ]
 )
 interface ComponentSam05 {
+
     fun inject(fragment: Fragment05Sample)
 }

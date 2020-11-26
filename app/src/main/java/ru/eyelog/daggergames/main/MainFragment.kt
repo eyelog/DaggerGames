@@ -13,6 +13,8 @@ import ru.eyelog.daggergames.sample_02.Fragment02Sample
 import ru.eyelog.daggergames.sample_03.Fragment03Sample
 import ru.eyelog.daggergames.sample_04.Fragment04Sample
 import ru.eyelog.daggergames.sample_05.Fragment05Sample
+import ru.eyelog.daggergames.sample_06.Fragment06Sample
+import ru.eyelog.daggergames.sample_07.Fragment07Sample
 
 class MainFragment: Fragment() {
 
@@ -31,8 +33,8 @@ class MainFragment: Fragment() {
         bt03Sample.setOnClickListener { setFragment(Fragment03Sample())}
         bt04Sample.setOnClickListener { setFragment(Fragment04Sample())}
         bt05Sample.setOnClickListener { setFragment(Fragment05Sample())}
-        bt06Sample.setOnClickListener { setFragment(Fragment05Sample())}
-        bt07Sample.setOnClickListener { setFragment(Fragment05Sample())}
+        bt06Sample.setOnClickListener { setFragment(Fragment06Sample())}
+        bt07Sample.setOnClickListener { setFragment(Fragment07Sample())}
         bt08Sample.setOnClickListener { setFragment(Fragment05Sample())}
         bt09Sample.setOnClickListener { setFragment(Fragment05Sample())}
 
