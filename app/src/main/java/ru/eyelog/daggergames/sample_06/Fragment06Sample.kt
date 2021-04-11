@@ -18,16 +18,16 @@ class Fragment06Sample : Fragment() {
         super.onCreate(savedInstanceState)
 
         DaggerComponentSam06
-            .builder()
-            .withContext(ModuleSam06(context))
-            .build()
-            .inject(this)
+                .builder()
+                .moduleSam06(ModuleSam06(context))
+                .build()
+                .inject(this)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? = inflater.inflate(R.layout.fragment_common, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

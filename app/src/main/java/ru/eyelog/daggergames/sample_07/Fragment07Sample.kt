@@ -7,20 +7,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_common.*
 import ru.eyelog.daggergames.R
+import ru.eyelog.daggergames.common.RayApplyContext
+import ru.eyelog.daggergames.common.RayGet
+import ru.eyelog.daggergames.sample_06.DaggerComponentSam06
 import javax.inject.Inject
 
 class Fragment07Sample : Fragment() {
 
+    lateinit var subComponentSam07: SubComponentSam07
+
     @Inject
-    lateinit var gen: Gen07
+    lateinit var ray: RayApplyContext
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        DaggerComponentSam07
-            .builder()
-            .build()
-            .inject(this)
+//        Dagger
+//            .builder()
+//            .build()
+//            .inject(this)
     }
 
     override fun onCreateView(
@@ -32,6 +37,6 @@ class Fragment07Sample : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvOut.text = gen.getSubName()
+        tvOut.text = ray.applyRey()
     }
 }
